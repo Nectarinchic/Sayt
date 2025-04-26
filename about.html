@@ -1,1 +1,50 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><title>About - YourBrand</title></head><body>About Page</body></html>
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About YourBrand">
+  <title>About | YourBrand</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-poppins text-gray-800">
+  <header class="bg-white shadow py-4">
+    <nav class="container mx-auto px-6 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-blue-600">YourBrand</a>
+      <div class="space-x-4 hidden md:flex">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link text-blue-600 font-semibold">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h1 class="text-4xl font-bold mb-6 text-center">About Us</h1>
+      <p class="text-lg leading-relaxed text-center max-w-3xl mx-auto">We are a team of passionate professionals committed to delivering top-notch digital solutions. Our mission is to empower small businesses with technology and strategic insights that drive real growth.</p>
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <img src="assets/images/about-img.jpg" alt="About YourBrand" class="rounded shadow-lg">
+        <div>
+          <h2 class="text-2xl font-semibold mb-4">Our Vision</h2>
+          <p class="text-gray-700 leading-relaxed">To be a trusted partner in digital transformation by consistently delivering excellence in service and innovation.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white text-center py-6 border-t">
+    <p class="text-gray-600">&copy; 2025 YourBrand. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

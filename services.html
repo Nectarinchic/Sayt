@@ -1,1 +1,57 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><title>Services - YourBrand</title></head><body>Services Page</body></html>
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | YourBrand</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-poppins text-gray-800 scroll-smooth">
+  <header class="fixed w-full bg-white shadow z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+      <a href="index.html" class="text-2xl font-bold text-blue-600">YourBrand</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link font-semibold text-blue-600">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="pt-28 pb-20 px-6">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold text-center mb-12">Our Services</h1>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow rounded p-6 text-center">
+          <i class="fas fa-laptop-code text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+          <p class="text-gray-600">Custom websites that align with your brand and drive results.</p>
+        </div>
+        <div class="bg-white shadow rounded p-6 text-center">
+          <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">SEO & Marketing</h3>
+          <p class="text-gray-600">Boost your visibility and reach with smart digital strategies.</p>
+        </div>
+        <div class="bg-white shadow rounded p-6 text-center">
+          <i class="fas fa-comments text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Consulting</h3>
+          <p class="text-gray-600">Business guidance and strategic planning tailored to you.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
