@@ -1,25 +1,24 @@
-<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | YourBrand</title>
+  <title>Contact | YourBrand</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="font-poppins text-gray-800 scroll-smooth">
-  <header class="fixed w-full bg-white shadow z-50">
+<body class="font-poppins text-gray-800">
+  <!-- Header -->
+  <header id="header" class="fixed w-full bg-transparent z-50 transition duration-300 ease-in-out">
     <nav class="container mx-auto flex items-center justify-between py-4 px-6">
       <a href="index.html" class="text-2xl font-bold text-blue-600">YourBrand</a>
       <div class="hidden md:flex space-x-6">
         <a href="index.html#home" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link font-semibold text-blue-600">Services</a>
+        <a href="services.html" class="nav-link">Services</a>
         <a href="portfolio.html" class="nav-link">Portfolio</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </div>
@@ -27,31 +26,38 @@
         <i class="fas fa-bars"></i>
       </button>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden flex-col space-y-4 bg-white p-6 text-center">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
   </header>
 
-  <main class="pt-28 pb-20 px-6">
-    <div class="container mx-auto">
-      <h1 class="text-4xl font-bold text-center mb-12">Our Services</h1>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white shadow rounded p-6 text-center">
-          <i class="fas fa-laptop-code text-4xl text-blue-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Web Development</h3>
-          <p class="text-gray-600">Custom websites that align with your brand and drive results.</p>
+  <!-- Contact Section -->
+  <section class="pt-32 pb-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Get In Touch</h2>
+      <form class="max-w-2xl mx-auto bg-white p-8 rounded shadow-lg space-y-6">
+        <div>
+          <label class="block mb-2 font-semibold text-gray-700">Name</label>
+          <input type="text" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-600" required />
         </div>
-        <div class="bg-white shadow rounded p-6 text-center">
-          <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">SEO & Marketing</h3>
-          <p class="text-gray-600">Boost your visibility and reach with smart digital strategies.</p>
+        <div>
+          <label class="block mb-2 font-semibold text-gray-700">Email</label>
+          <input type="email" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-600" required />
         </div>
-        <div class="bg-white shadow rounded p-6 text-center">
-          <i class="fas fa-comments text-4xl text-blue-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Consulting</h3>
-          <p class="text-gray-600">Business guidance and strategic planning tailored to you.</p>
+        <div>
+          <label class="block mb-2 font-semibold text-gray-700">Message</label>
+          <textarea rows="5" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-600" required></textarea>
         </div>
-      </div>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition">Send Message</button>
+      </form>
     </div>
-  </main>
+  </section>
 
   <script src="script.js"></script>
 </body>
+
 </html>
