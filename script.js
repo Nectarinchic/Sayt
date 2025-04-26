@@ -25,27 +25,26 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
     menu.classList.toggle('hidden');
   });
   
-  // Smooth scrolling + Active link highlighting
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link");
-  
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100;
-      if (pageYOffset >= sectionTop) {
-        current = section.getAttribute("id");
+// Smooth scrolling + Active link highlighting (fixed)
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    // Если это якорь на этой странице (например #home)
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70, // Учитываем высоту хедера
+          behavior: 'smooth'
+        });
       }
-    });
-  
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
+    }
+    // Если ссылка на другую страницу — просто идём по ней (ничего не делаем)
   });
-  
+});
+
   // Lazy loading images
   document.addEventListener("DOMContentLoaded", () => {
     const lazyImages = document.querySelectorAll("img.lazy");
